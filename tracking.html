@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track Parcel — SwiftHaul Logistics Nigeria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Swift<span>Haul</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html">Book Delivery</a></li>
+      <li><a href="tracking.html" class="active">Track Parcel</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="booking.html" class="btn btn-primary">Book Now</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="booking.html">Book Delivery</a>
+    <a href="tracking.html">Track Parcel</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <p class="section-tag">Live Updates</p>
+      <h1>Track Your <span class="accent">Parcel</span></h1>
+      <p>Enter your tracking ID to see real-time shipment status and location.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tracking-section section">
+  <div class="container">
+
+    <div class="tracking-input-box">
+      <label for="trackingInput">Enter Tracking ID</label>
+      <div class="tracking-input-row">
+        <input type="text" id="trackingInput" placeholder="e.g. SH-29041" maxlength="12"/>
+        <button class="btn btn-primary" id="trackBtn">Track Now 🔍</button>
+      </div>
+      <p class="track-hint">Try demo IDs: <strong>SH-29041</strong>, <strong>SH-11234</strong>, or <strong>SH-55678</strong></p>
+    </div>
+
+    <div id="trackingResult" class="tracking-result" style="display:none">
+
+      <div class="tracking-header">
+        <div class="tracking-meta">
+          <div class="tracking-id-badge" id="trackIdBadge">—</div>
+          <div class="tracking-route" id="trackRoute">—</div>
+        </div>
+        <div class="tracking-status-badge" id="trackStatusBadge">—</div>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="tracking-progress">
+        <div class="progress-steps" id="progressSteps">
+          <div class="progress-step" data-step="1">
+            <div class="progress-dot"></div>
+            <span>Order Placed</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="2">
+            <div class="progress-dot"></div>
+            <span>Picked Up</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="3">
+            <div class="progress-dot"></div>
+            <span>In Transit</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="4">
+            <div class="progress-dot"></div>
+            <span>Out for Delivery</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="5">
+            <div class="progress-dot"></div>
+            <span>Delivered</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="tracking-timeline">
+        <h3>Shipment History</h3>
+        <div class="timeline" id="trackingTimeline"></div>
+      </div>
+
+      <!-- PARCEL INFO -->
+      <div class="parcel-details" id="parcelDetails"></div>
+
+    </div>
+
+    <div id="trackingNotFound" class="tracking-not-found" style="display:none">
+      <div class="not-found-icon">🔎</div>
+      <h3>Tracking ID Not Found</h3>
+      <p>Please check the ID and try again, or <a href="contact.html">contact support</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="index.html" class="logo">Swift<span>Haul</span></a><p>Nigeria's trusted logistics partner.</p></div>
+    <div class="footer-links"><h4>Pages</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="booking.html">Book Delivery</a><a href="tracking.html">Track Parcel</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 SwiftHaul Logistics Nigeria Ltd.</p></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

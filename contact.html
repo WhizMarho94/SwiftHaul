@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — SwiftHaul Logistics Nigeria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Swift<span>Haul</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html">Book Delivery</a></li>
+      <li><a href="tracking.html">Track Parcel</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="booking.html" class="btn btn-primary">Book Now</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="booking.html">Book Delivery</a>
+    <a href="tracking.html">Track Parcel</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <p class="section-tag">Get in Touch</p>
+      <h1>We're Here to <span class="accent">Help You</span></h1>
+      <p>Have a question, complaint, or want to discuss bulk shipping? Reach us anytime.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- CONTACT CHANNELS -->
+      <div class="contact-channels">
+        <h2>Reach Us Directly</h2>
+
+        <a href="tel:+2348012345678" class="contact-channel-card">
+          <div class="channel-icon">📞</div>
+          <div class="channel-info">
+            <strong>Call Us</strong>
+            <span>+234 801 234 5678</span>
+            <small>Mon–Sat, 7AM – 9PM</small>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+
+        <a href="https://wa.me/2348012345678?text=Hello%20SwiftHaul,%20I%20need%20help%20with%20my%20delivery" target="_blank" class="contact-channel-card whatsapp">
+          <div class="channel-icon">💬</div>
+          <div class="channel-info">
+            <strong>WhatsApp</strong>
+            <span>+234 801 234 5678</span>
+            <small>Quickest response</small>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+
+        <a href="mailto:support@swifthaul.ng" class="contact-channel-card">
+          <div class="channel-icon">📧</div>
+          <div class="channel-info">
+            <strong>Email Us</strong>
+            <span>support@swifthaul.ng</span>
+            <small>Response within 2 hours</small>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+
+        <div class="contact-channel-card no-link">
+          <div class="channel-icon">📍</div>
+          <div class="channel-info">
+            <strong>Head Office</strong>
+            <span>12 Logistics Way, Ikeja</span>
+            <small>Lagos, Nigeria</small>
+          </div>
+        </div>
+
+        <div class="office-hours">
+          <h4>🕐 Office Hours</h4>
+          <div class="hours-grid">
+            <span>Monday – Friday</span><span>7:00 AM – 9:00 PM</span>
+            <span>Saturday</span><span>8:00 AM – 6:00 PM</span>
+            <span>Sunday</span><span>10:00 AM – 4:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form-wrap">
+        <h2>Send a Message</h2>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" id="contactName" placeholder="Full name" required/>
+              <span class="form-error" id="contactNameError"></span>
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="contactPhone" placeholder="08012345678" required/>
+              <span class="form-error" id="contactPhoneError"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" id="contactEmail" placeholder="you@example.com" required/>
+            <span class="form-error" id="contactEmailError"></span>
+          </div>
+          <div class="form-group">
+            <label>Subject *</label>
+            <select id="contactSubject" required>
+              <option value="">-- Select a topic --</option>
+              <option>General Enquiry</option>
+              <option>Tracking Issue</option>
+              <option>Damaged / Lost Parcel</option>
+              <option>Bulk Shipping Quote</option>
+              <option>Warehousing Enquiry</option>
+              <option>Partnership / Corporate</option>
+              <option>Other</option>
+            </select>
+            <span class="form-error" id="contactSubjectError"></span>
+          </div>
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea id="contactMessage" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+            <span class="form-error" id="contactMessageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-full" id="contactSubmitBtn">
+            Send Message 📨
+          </button>
+          <div class="form-success" id="contactSuccess" style="display:none">
+            ✅ Message sent! We'll get back to you within 2 hours.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">FAQ</p>
+      <h2>Common <span class="accent">Questions</span></h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-question">How do I track my parcel? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">Visit our <a href="tracking.html">Tracking page</a> and enter the tracking ID you received via SMS or email after booking.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What if my package is damaged or lost? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">We take full responsibility for items damaged in our care. Contact us immediately via WhatsApp or email with photos and your tracking ID. Insured items are reimbursed within 5 business days.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I pay for delivery? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">We accept cash on pickup, bank transfer, and card payment via our riders' POS. Corporate clients can also be invoiced monthly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I reschedule or cancel my booking? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes! Contact us at least 1 hour before the scheduled pickup to reschedule or cancel for free. Late cancellations may attract a small fee.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you deliver on weekends? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes! We operate 7 days a week, including public holidays. Same-day service may not be available on Sundays in some locations.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="index.html" class="logo">Swift<span>Haul</span></a><p>Nigeria's trusted logistics partner. Fast, reliable, transparent delivery nationwide.</p></div>
+    <div class="footer-links"><h4>Pages</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="booking.html">Book Delivery</a><a href="tracking.html">Track Parcel</a><a href="contact.html">Contact</a></div>
+    <div class="footer-links"><h4>Contact</h4><a href="tel:+2348012345678">+234 801 234 5678</a><a href="mailto:support@swifthaul.ng">support@swifthaul.ng</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 SwiftHaul Logistics Nigeria Ltd. All rights reserved.</p></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

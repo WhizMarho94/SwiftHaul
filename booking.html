@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Delivery — SwiftHaul Logistics Nigeria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Swift<span>Haul</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html" class="active">Book Delivery</a></li>
+      <li><a href="tracking.html">Track Parcel</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="booking.html" class="btn btn-primary">Book Now</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="booking.html">Book Delivery</a>
+    <a href="tracking.html">Track Parcel</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <p class="section-tag">Quick & Easy</p>
+      <h1>Book Your <span class="accent">Delivery</span></h1>
+      <p>Fill the form below to schedule your pickup. Get an instant price estimate.</p>
+    </div>
+  </div>
+</section>
+
+<section class="booking-section section">
+  <div class="container">
+    <div class="booking-layout">
+
+      <div class="booking-form-wrap">
+        <form id="bookingForm" class="booking-form" novalidate>
+
+          <!-- SECTION: SENDER -->
+          <div class="form-section">
+            <h3 class="form-section-title">📍 Sender Details</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="senderName" placeholder="e.g. Amaka Okonkwo" required/>
+                <span class="form-error" id="senderNameError"></span>
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" id="senderPhone" placeholder="e.g. 08012345678" required/>
+                <span class="form-error" id="senderPhoneError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Pickup Address *</label>
+              <input type="text" id="pickupAddress" placeholder="Street address, area, city" required/>
+              <span class="form-error" id="pickupAddressError"></span>
+            </div>
+            <div class="form-group">
+              <label>Pickup State *</label>
+              <select id="pickupState" required>
+                <option value="">-- Select State --</option>
+                <option>Lagos</option><option>Abuja (FCT)</option><option>Port Harcourt</option>
+                <option>Kano</option><option>Ibadan (Oyo)</option><option>Enugu</option>
+                <option>Warri (Delta)</option><option>Kaduna</option><option>Benin City (Edo)</option>
+                <option>Other</option>
+              </select>
+              <span class="form-error" id="pickupStateError"></span>
+            </div>
+          </div>
+
+          <!-- SECTION: RECEIVER -->
+          <div class="form-section">
+            <h3 class="form-section-title">📦 Receiver Details</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Receiver Name *</label>
+                <input type="text" id="receiverName" placeholder="e.g. Tunde Bello" required/>
+                <span class="form-error" id="receiverNameError"></span>
+              </div>
+              <div class="form-group">
+                <label>Receiver Phone *</label>
+                <input type="tel" id="receiverPhone" placeholder="e.g. 07098765432" required/>
+                <span class="form-error" id="receiverPhoneError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Delivery Address *</label>
+              <input type="text" id="deliveryAddress" placeholder="Street address, area, city" required/>
+              <span class="form-error" id="deliveryAddressError"></span>
+            </div>
+            <div class="form-group">
+              <label>Delivery State *</label>
+              <select id="deliveryState" required>
+                <option value="">-- Select State --</option>
+                <option>Lagos</option><option>Abuja (FCT)</option><option>Port Harcourt</option>
+                <option>Kano</option><option>Ibadan (Oyo)</option><option>Enugu</option>
+                <option>Warri (Delta)</option><option>Kaduna</option><option>Benin City (Edo)</option>
+                <option>Other</option>
+              </select>
+              <span class="form-error" id="deliveryStateError"></span>
+            </div>
+          </div>
+
+          <!-- SECTION: PACKAGE -->
+          <div class="form-section">
+            <h3 class="form-section-title">📋 Package Details</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Package Type *</label>
+                <select id="packageType" required>
+                  <option value="">-- Select Type --</option>
+                  <option value="document">Document / Envelope</option>
+                  <option value="parcel">Parcel (up to 5kg)</option>
+                  <option value="medium">Medium Package (5–20kg)</option>
+                  <option value="bulk">Bulk / Large Cargo</option>
+                </select>
+                <span class="form-error" id="packageTypeError"></span>
+              </div>
+              <div class="form-group">
+                <label>Estimated Weight (kg) *</label>
+                <input type="number" id="weight" placeholder="e.g. 2" min="0.1" step="0.1" required/>
+                <span class="form-error" id="weightError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Delivery Speed *</label>
+              <div class="speed-options" id="speedOptions">
+                <label class="speed-option">
+                  <input type="radio" name="speed" value="sameday" required/>
+                  <div class="speed-card">
+                    <strong>⚡ Same-Day</strong>
+                    <small>Book before 12 PM</small>
+                  </div>
+                </label>
+                <label class="speed-option">
+                  <input type="radio" name="speed" value="nextday"/>
+                  <div class="speed-card">
+                    <strong>🌅 Next-Day</strong>
+                    <small>By next business day</small>
+                  </div>
+                </label>
+                <label class="speed-option">
+                  <input type="radio" name="speed" value="standard"/>
+                  <div class="speed-card">
+                    <strong>📦 Standard</strong>
+                    <small>2–3 business days</small>
+                  </div>
+                </label>
+              </div>
+              <span class="form-error" id="speedError"></span>
+            </div>
+            <div class="form-group">
+              <label>Additional Notes (optional)</label>
+              <textarea id="notes" rows="3" placeholder="Fragile items, special instructions, etc."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-full">
+            Get Price Estimate & Confirm Booking
+          </button>
+        </form>
+      </div>
+
+      <!-- PRICE ESTIMATOR -->
+      <div class="price-panel">
+        <div class="price-panel-inner" id="pricePanel">
+          <h3>💰 Price Estimate</h3>
+          <p class="price-note-top">Fill in the form to see your instant estimate.</p>
+          <div class="price-breakdown" id="priceBreakdown" style="display:none">
+            <div class="price-line"><span>Base rate</span><span id="baseRate">—</span></div>
+            <div class="price-line"><span>Weight charge</span><span id="weightCharge">—</span></div>
+            <div class="price-line"><span>Speed surcharge</span><span id="speedCharge">—</span></div>
+            <div class="price-divider"></div>
+            <div class="price-line total"><span>Total Estimate</span><span id="totalPrice">—</span></div>
+          </div>
+          <div class="price-info">
+            <p>📍 Prices vary by distance and weight.</p>
+            <p>💳 Payment on pickup or delivery.</p>
+            <p>🛡️ Insurance available for items above ₦50,000.</p>
+          </div>
+        </div>
+
+        <div class="booking-confirmed" id="bookingConfirmed" style="display:none">
+          <div class="confirm-icon">🎉</div>
+          <h3>Booking Confirmed!</h3>
+          <p>Your tracking ID is:</p>
+          <div class="tracking-id-display" id="confirmedTrackingId">SH-000000</div>
+          <p class="confirm-sub">You'll receive an SMS and email shortly. <a href="tracking.html">Track your parcel →</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="index.html" class="logo">Swift<span>Haul</span></a><p>Nigeria's trusted logistics partner.</p></div>
+    <div class="footer-links"><h4>Pages</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="booking.html">Book Delivery</a><a href="tracking.html">Track Parcel</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 SwiftHaul Logistics Nigeria Ltd.</p></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
